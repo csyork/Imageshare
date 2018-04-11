@@ -9,6 +9,10 @@ class PhotosController < ApplicationController
  def new
   @photo = Photo.new
  end
+ 
+ def show
+  @photo = Photo.find(params[:id])
+ end
 
  #Create action ensures that submitted photo gets created if it meets the requirements
  def create
