@@ -8,7 +8,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="body">
     <!-- Renders navigation file located at app/views/layouts/_navigation.html.erb -->
     <%= render "layouts/navigation" %>
     <div id="flash">
@@ -20,4 +20,7 @@
       <%= yield %>
     </div>
   </body>
+  <footer class ="footer">
+    <p id="contact"> Contact us at example@gmail.com</p>
+  </footer>
 </html>

@@ -15,3 +15,56 @@
  */
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
+
+
+.navbar-default {
+    background-color: #4CAF50;
+    
+}
+.navbar-brand {
+    color: white;
+}
+
+.form-group {
+    width: 100%;
+    padding: 12px 12px;
+    border: 2px solid #ccc;
+    background-color: #4CAF50;
+    
+}
+
+input[type=button], input[type=submit] {
+    background-color: #4CAF50;
+    float: left;
+    border:none;
+    color: white;
+    padding: 16px 20px;
+    
+    text-decoration: none;
+    cursor: pointer;
+}
+.body {
+    background-color:  	#888888;
+    position: relative;
+    min-width: 1024px;
+    min-height: 2000px;
+    height: 400%;
+    
+}
+
+.footer {
+    background-color: #4CAF50;
+    padding-top: 10px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+
+}
+#contact {
+    font-size: 125%;
+}
+
+title {
+    color: white;
+}
