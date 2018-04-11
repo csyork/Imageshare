@@ -5,15 +5,15 @@
     <%= link_to image_tag(@photo.image, class: 'media-object', size: "1366x768") %>
     </center>
     <%= link_to 'Remove', @photo, class: 'btn btn-danger', method: :delete, data: {confirm: 'Are you sure?'} %>
-    
+</p>   
 
-    
-    <h2>Add a comment:</h2>
-    <%= render 'comments/form' %>
-    
+<p>
     <center>
     <h2>Comments: </h2>
     <%= render @photo.comments %>
     </center>
+    
+    <h2>Add a comment:</h2>
+    <%= render 'comments/form' %>
     
 </p>
