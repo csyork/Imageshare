@@ -1,10 +1,17 @@
+<head>
+     <%= csrf_meta_tags %>
 
+     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+</head>
 <p>
     <center>
     <%= @photo.title %>
     <%= link_to image_tag(@photo.image, class: 'media-object', size: "1366x768") %>
     </center>
     <%= link_to 'Remove', @photo, class: 'btn btn-danger', method: :delete, data: {confirm: 'Are you sure?'} %>
+    
 </p>   
 
 <p>
@@ -17,3 +24,21 @@
     <%= render 'comments/form' %>
     
 </p>
+
+<!-- W3 schools popup modal used for report button-->
+
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">Report</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+     <center>
+    <h2>Report this Photo:</h2>
+    <%= render 'reports/form' %>
+  </div>
+
+</div>
