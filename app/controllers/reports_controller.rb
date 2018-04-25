@@ -6,6 +6,13 @@ class ReportsController < ApplicationController
         redirect_to photo_path(@photo)
     end
     
+    def destroy
+        @photo = Photo.find(params[:photo_id])
+        @report = @photo.reports.find(params[:id])
+        @report.destroy
+        redirect_to photo_path(@photo)
+    end
+    
     private
         def report_params
             params.require(:report).permit(:reporter, :body)

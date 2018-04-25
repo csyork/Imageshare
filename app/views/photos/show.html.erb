@@ -27,6 +27,30 @@
 
 <!-- W3 schools popup modal used for report button-->
 
+
+
+
+<div id="myModal2" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close2">&times;</span>
+         <center>
+        <h2>Reports:</h2>
+        <%= render @photo.reports %>
+        </center>
+       </div>
+  
+</div>
+
+
+
+
+
+
+
+
+
 <!-- Trigger/Open The Modal -->
 <button id="myBtn">Report</button>
 
@@ -39,6 +63,11 @@
      <center>
     <h2>Report this Photo:</h2>
     <%= render 'reports/form' %>
-  </div>
-
+    </center>
+    
+    <button id="reportsButton">View Reports</button>
+   
+   </div> 
 </div>
+
+

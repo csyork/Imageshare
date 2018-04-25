@@ -1,0 +1,15 @@
+<p>
+    <strong>Reporter: </strong>
+    <%= report.reporter %>
+</p>
+        
+<p>
+    <strong>Report: </strong>
+    <%= report.body %>
+</p>
+
+<p>
+    <%= link_to 'Delete Report', [report.photo, report],
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %>
+</p>
