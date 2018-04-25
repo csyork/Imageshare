@@ -21,6 +21,13 @@ ActiveRecord::Schema.define(version: 20180423170951) do
     t.index ["photo_id"], name: "index_comments_on_photo_id"
   end
 
+  create_table "images", force: :cascade do |t|
+    t.string "title"
+    t.text "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "photos", force: :cascade do |t|
     t.string "title"
     t.datetime "created_at", null: false

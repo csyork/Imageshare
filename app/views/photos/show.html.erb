@@ -8,27 +8,36 @@
 <p>
     <center>
     <%= @photo.title %>
-    <%= link_to image_tag(@photo.image, class: 'media-object', size: "1366x768") %>
+    <%= link_to image_tag(@photo.image, class: 'media-object', size: "640x480") %>
     </center>
     <%= link_to 'Remove', @photo, class: 'btn btn-danger', method: :delete, data: {confirm: 'Are you sure?'} %>
     
 </p>   
 
 <p>
-    <center>
-    <h2 id= "h2">Comments: </h2>
-    <%= render @photo.comments %>
-    </center>
+    <div class="comments">
+        <center>
+            <h2 class = "comment">Comments: </h2>
+               <%= render @photo.comments %>
+        </center>
     
-    <h2>Add a comment:</h2>
-    <%= render 'comments/form' %>
+        <center>
+            <h2 class ="acomment">Add a comment:</h2>
+            <%= render 'comments/form' %>
+        </center>
+        <center>
+            <button id="myBtn">Report</button>
+        </center>
+    </div>
     
 </p>
 
 <!-- W3 schools popup modal used for report button-->
 
 <!-- Trigger/Open The Modal -->
-<button id="myBtn">Report</button>
+
+
+
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
