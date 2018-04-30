@@ -7,6 +7,7 @@ feature"User adds a photo" do
         click_link "Upload New Image"
         expect(page).to have_content("Upload Photo")
         expect(page).to have_field("Image")
+        expect(page).to have_field("Title")
     end
     
     scenario "User successfully navigates to the index page from the upload page" do
