@@ -7,7 +7,8 @@
 </head>
 <p>
     <center>
-    <%= @photo.title %>
+    
+    <h3><%= @photo.title %></h3>
     <%= link_to image_tag(@photo.image, class: 'media-object', size: "640x480") %>
     </center>
     <%= link_to 'Remove', @photo, class: 'btn btn-danger', method: :delete, data: {confirm: 'Are you sure?'} %>
@@ -25,6 +26,7 @@
             <h2 class ="acomment">Add a comment:</h2>
             <%= render 'comments/form' %>
         </center>
+        
         <center>
             <button id="myBtn">Report</button>
         </center>
